@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context="com.example.elena.tennissimulation.MainActivity">
+
+
+    <Button
+        android:id="@+id/button_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/play_button"
+        android:background="@color/colorAccent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:paddingEnd="40dp"
+        android:paddingStart="40dp"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp"
+        android:textSize="20sp"
+        android:layout_marginTop="120dp"
+        android:onClick="onPlayClick"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:onClick="onInstructionsClick"
+        android:id="@+id/button_instructions"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/instructions_button"
+        android:layout_marginTop="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/button_play"
+        app:layout_constraintLeft_toLeftOf="@+id/button_play"
+        app:layout_constraintRight_toRightOf="@+id/button_play"
+        android:background="@color/colorAccent"
+        android:paddingEnd="10dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:paddingStart="10dp"
+        android:textSize="20sp"
+        />
+
+    <ImageView
+        android:contentDescription="@string/ball_content_description"
+        android:id="@+id/image_view_ball"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ball"
+        app:srcCompat="@drawable/ball"
+        app:layout_constraintLeft_toLeftOf="@+id/button_play"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_instructions" />
+</android.support.constraint.ConstraintLayout>
